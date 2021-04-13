@@ -51,6 +51,7 @@ modules:
       - ar p bitwig-studio-*.deb data.tar.xz | tar -xJf -
       - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/lib
       - rm usr/share/metainfo/bitwig-studio.appdata.xml
+      - rm usr/share/mime/packages/com.bitwig.BitwigStudio.xml
       - cp -r opt/bitwig-studio/* ${FLATPAK_DEST}
       - cp -r usr/* ${FLATPAK_DEST}
     post-install:
@@ -62,6 +63,7 @@ modules:
           mv $i ${FLATPAK_ID}.$i;
         done
       - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo com.bitwig.BitwigStudio.appdata.xml
+      - install -Dm644 -t ${FLATPAK_DEST}/share/mime/packages com.bitwig.BitwigStudio.xml
       - install -d /app/extensions/Plugins
     sources:
       - type: file
@@ -71,5 +73,7 @@ modules:
           - x86_64
       - type: file
         path: com.bitwig.BitwigStudio.appdata.xml
+      - type: file
+        path: com.bitwig.BitwigStudio.xml
 
 # vim: set expandtab tabstop=2 sw=2:
