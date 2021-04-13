@@ -51,7 +51,7 @@ modules:
       - ar p bitwig-studio-*.deb data.tar.xz | tar -xJf -
       - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/lib
       - rm usr/share/metainfo/bitwig-studio.appdata.xml
-      - rm usr/share/mime/packages/com.bitwig.BitwigStudio.xml
+      - rm usr/share/mime/packages/*.xml
       - cp -r opt/bitwig-studio/* ${FLATPAK_DEST}
       - cp -r usr/* ${FLATPAK_DEST}
     post-install:
