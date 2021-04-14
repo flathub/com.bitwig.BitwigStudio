@@ -5,9 +5,12 @@
   <metadata_license>MIT</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <name>Bitwig Studio</name>
-  <summary>Bitwig Studio digital audio workstation</summary>
+  <summary>Modern music production and performance for Windows, macOS, and Linux.</summary>
   <description>
-    <p>Modern music production and performance for Windows, macOS, and Linux.</p>
+    <p>Bitwig Studio is a digital audio workstation (DAW) that inspires you to take greater control of your music,
+    giving you access to every aspect of your production. Streamline your creative process and quickly evolve your
+    ideas into complete songs, tracks, and compositions. Record and arrange, improvise and perform, or do it all at once.
+    Design sounds. Build instruments. Make music.</p>
   </description>
   <screenshots>
     <screenshot type="default">
