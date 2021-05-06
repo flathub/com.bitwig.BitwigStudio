@@ -53,7 +53,7 @@ modules:
       - cp -r usr/* ${FLATPAK_DEST}
     post-install:
       - ln -sf ../bitwig-studio ${FLATPAK_DEST}/bin/
-      - sed -ri 's@"/usr/bin/bitwig-studio"@bitwig-studio@' ${FLATPAK_DEST}/share/applications/bitwig-studio.desktop
+      - sed -ri 's@"/usr/bin/bitwig-studio"@bitwig-studio@' ${FLATPAK_DEST}/share/applications/com.bitwig.BitwigStudio.desktop
       - cd ${FLATPAK_DEST}/share/icons/hicolor/scalable/mimetypes/;
         for i in * ; do
           mv $i ${FLATPAK_ID}.$i;
