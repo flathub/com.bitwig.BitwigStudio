@@ -46,7 +46,7 @@ modules:
     buildsystem: simple
     build-commands:
       - ar p bitwig-studio-*.deb data.tar.xz | tar -xJf -
-      - rm usr/share/metainfo/com.bitwig.BitwigStudio.desktop
+      - rm usr/share/metainfo/com.bitwig.BitwigStudio.appdata.xml
       - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/lib
       - cp -r opt/bitwig-studio/* ${FLATPAK_DEST}
       - cp -r usr/* ${FLATPAK_DEST}
