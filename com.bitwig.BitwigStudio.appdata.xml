@@ -46,7 +46,7 @@
   <url type="faq">https://www.bitwig.com/support/</url>
   <url type="contact">https://www.bitwig.com/contact/</url>
   <releases>
-    <release>3.3.8</release>
+    <release date="2021-05-06" version="3.3.8"/>
   </releases>
   <provides>
     <mediatype>application/bitwig-project</mediatype>
