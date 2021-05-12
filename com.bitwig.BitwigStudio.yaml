@@ -50,10 +50,6 @@ modules:
       - cp -r usr/* ${FLATPAK_DEST}
     post-install:
       - ln -sf ../bitwig-studio ${FLATPAK_DEST}/bin/
-      - cd ${FLATPAK_DEST}/share/icons/hicolor/scalable/mimetypes/;
-        for i in * ; do
-          mv $i ${FLATPAK_ID}.$i;
-        done
       - install -d /app/extensions/plugins
     sources:
       - type: file
