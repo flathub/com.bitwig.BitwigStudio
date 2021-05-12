@@ -46,29 +46,20 @@ modules:
     buildsystem: simple
     build-commands:
       - ar p bitwig-studio-*.deb data.tar.xz | tar -xJf -
-      - rm usr/share/metainfo/com.bitwig.BitwigStudio.appdata.xml
-      - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/lib ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps
       - cp -r opt/bitwig-studio/* ${FLATPAK_DEST}
       - cp -r usr/* ${FLATPAK_DEST}
     post-install:
       - ln -sf ../bitwig-studio ${FLATPAK_DEST}/bin/
-      - sed -ri 's@"/usr/bin/bitwig-studio"@bitwig-studio@' ${FLATPAK_DEST}/share/applications/com.bitwig.BitwigStudio.desktop
       - cd ${FLATPAK_DEST}/share/icons/hicolor/scalable/mimetypes/;
         for i in * ; do
           mv $i ${FLATPAK_ID}.$i;
         done
-      - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo com.bitwig.BitwigStudio.appdata.xml
-      - install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps com.bitwig.BitwigStudio.png
       - install -d /app/extensions/Plugins
     sources:
       - type: file
-        url: https://downloads.bitwig.com/stable/3.3.8/bitwig-studio-3.3.8.deb
-        sha512: 1f4ad4c3d92b243b584e57d6f57adbeb04b6eac09dd54fc019e551d1a345907eaf022d735635ea1c9aeec257b08ac5582a52094119f656a52ecaa76f7009e376
+        url: https://downloads.bitwig.com/stable/3.3.9/bitwig-studio-3.3.9.deb
+        sha512: fdb8f1aa667f8ed65e12d951e1724da29a3b25fac287e4edc967bcfbff22c618c2cde4d5f8208cd1b7c9679c5cd48076349a3924a914e71e4901d3f98841c908
         only-arches:
           - x86_64
-      - type: file
-        path: com.bitwig.BitwigStudio.appdata.xml
-      - type: file
-        path: com.bitwig.BitwigStudio.png
 
 # vim: set expandtab tabstop=2 sw=2:
