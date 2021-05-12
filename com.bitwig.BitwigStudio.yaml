@@ -29,12 +29,12 @@ finish-args:
   - --persist=Bitwig Studio
 
   - --env=ALSA_CONFIG_PATH=
-  - --env=VST_PATH=/app/extensions/Plugins/lxvst
-  - --env=VST3_PATH=/app/extensions/Plugins/vst3
+  - --env=VST_PATH=/app/extensions/plugins/lxvst
+  - --env=VST3_PATH=/app/extensions/plugins/vst3
 
 add-extensions:
   org.freedesktop.LinuxAudio.Plugins:
-    directory: extensions/Plugins
+    directory: extensions/plugins
     versions: '20.08;19.08'
     add-ld-path: lib
     merge-dirs: lxvst;vst3
@@ -54,7 +54,7 @@ modules:
         for i in * ; do
           mv $i ${FLATPAK_ID}.$i;
         done
-      - install -d /app/extensions/Plugins
+      - install -d /app/extensions/plugins
     sources:
       - type: file
         url: https://downloads.bitwig.com/stable/3.3.9/bitwig-studio-3.3.9.deb
