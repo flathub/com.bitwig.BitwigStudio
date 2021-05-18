@@ -34,7 +34,7 @@ finish-args:
 
 add-extensions:
   org.freedesktop.LinuxAudio.Plugins:
-    directory: extensions/plugins
+    directory: extensions/Plugins
     versions: '20.08'
     add-ld-path: lib
     merge-dirs: lxvst;vst3
