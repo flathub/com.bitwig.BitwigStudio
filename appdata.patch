@@ -1,0 +1,10 @@
+--- a/com.bitwig.BitwigStudio.appdata.xml	2021-05-18 13:32:02.996482784 -0400
++++ b/com.bitwig.BitwigStudio.appdata.xml	2021-05-18 13:33:04.665023391 -0400
+@@ -46,6 +46,7 @@
+   <url type="faq">https://www.bitwig.com/support/</url>
+   <url type="contact">https://www.bitwig.com/contact/</url>
+   <releases>
++    <release version="3.3.8" date="2021-05-06" />
+   </releases>
+   <provides>
+     <mediatype>application/bitwig-project</mediatype>
