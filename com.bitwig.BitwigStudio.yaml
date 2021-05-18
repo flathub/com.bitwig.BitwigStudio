@@ -4,6 +4,7 @@ command: bitwig-studio
 runtime-version: "20.08"
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
+rename-desktop-file: bitwig-studio.desktop
 rename-icon: bitwig-studio
 finish-args:
   # We need MIDI, Audio, USB, DRI, and realtime performances
