@@ -6,6 +6,7 @@ runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 rename-desktop-file: bitwig-studio.desktop
 rename-icon: bitwig-studio
+#rename-appdata-file: 'bitwig-studio.appdata.xml'
 finish-args:
   # We need MIDI, Audio, USB, DRI, and realtime performances
   - --device=all
@@ -49,6 +50,8 @@ modules:
     build-commands:
       - ar p bitwig-studio-*.deb data.tar.xz | tar -xJf -
       - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/lib
+      - rm usr/share/metainfo/bitwig-studio.appdata.xml
+      - rm usr/share/mime/packages/*.xml
       - cp -r opt/bitwig-studio/* ${FLATPAK_DEST}
       - cp -r usr/* ${FLATPAK_DEST}
     post-install:
@@ -58,12 +61,18 @@ modules:
         for i in * ; do
           mv $i ${FLATPAK_ID}.$i;
         done
+      - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo com.bitwig.BitwigStudio.appdata.xml
+      - install -Dm644 -t ${FLATPAK_DEST}/share/mime/packages com.bitwig.BitwigStudio.xml
       - install -d /app/extensions/Plugins
     sources:
       - type: file
-        url: https://downloads.bitwig.com/stable/3.3.8/bitwig-studio-3.3.8.deb
-        sha512: 1f4ad4c3d92b243b584e57d6f57adbeb04b6eac09dd54fc019e551d1a345907eaf022d735635ea1c9aeec257b08ac5582a52094119f656a52ecaa76f7009e376
+        url: https://downloads.bitwig.com/stable/3.3.7/bitwig-studio-3.3.7.deb
+        sha512: 62f6594133bf27e15781c8c8a103c46b3a4f2798a250f5c30a35af378eea8766575a6123777f27cf287bf817270d51f4e6560ab9c8ae87c64b5ebdacc6d44f39
         only-arches:
           - x86_64
+      - type: file
+        path: com.bitwig.BitwigStudio.appdata.xml
+      - type: file
+        path: com.bitwig.BitwigStudio.xml
 
 # vim: set expandtab tabstop=2 sw=2:
