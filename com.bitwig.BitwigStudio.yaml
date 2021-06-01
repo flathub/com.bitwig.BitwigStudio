@@ -4,9 +4,6 @@ command: bitwig-studio
 runtime-version: "20.08"
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
-rename-desktop-file: bitwig-studio.desktop
-rename-icon: bitwig-studio
-#rename-appdata-file: 'bitwig-studio.appdata.xml'
 finish-args:
   # We need MIDI, Audio, USB, DRI, and realtime performances
   - --device=all
@@ -47,32 +44,22 @@ add-extensions:
 modules:
   - name: "bitwig-studio"
     buildsystem: simple
+    build-options:
+      strip: false
+      no-debuginfo: true
     build-commands:
-      - ar p bitwig-studio-*.deb data.tar.xz | tar -xJf -
-      - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/lib
-      - rm usr/share/metainfo/bitwig-studio.appdata.xml
-      - rm usr/share/mime/packages/*.xml
+      - ar p bitwig-studio.deb data.tar.xz | tar -xJf -
       - cp -r opt/bitwig-studio/* ${FLATPAK_DEST}
       - cp -r usr/* ${FLATPAK_DEST}
     post-install:
       - ln -sf ../bitwig-studio ${FLATPAK_DEST}/bin/
-      - sed -ri 's@"/usr/bin/bitwig-studio"@bitwig-studio@' ${FLATPAK_DEST}/share/applications/bitwig-studio.desktop
-      - cd ${FLATPAK_DEST}/share/icons/hicolor/scalable/mimetypes/;
-        for i in * ; do
-          mv $i ${FLATPAK_ID}.$i;
-        done
-      - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo com.bitwig.BitwigStudio.appdata.xml
-      - install -Dm644 -t ${FLATPAK_DEST}/share/mime/packages com.bitwig.BitwigStudio.xml
       - install -d /app/extensions/Plugins
     sources:
       - type: file
-        url: https://downloads.bitwig.com/stable/3.3.7/bitwig-studio-3.3.7.deb
-        sha512: 62f6594133bf27e15781c8c8a103c46b3a4f2798a250f5c30a35af378eea8766575a6123777f27cf287bf817270d51f4e6560ab9c8ae87c64b5ebdacc6d44f39
+        url: https://www.bitwig.com/dl/?id=439&os=installer_linux
+        dest-filename: bitwig-studio.deb
+        sha512: 37308548ebb7537b42779474a5779588ecd1597641c35c8e56cdc83ba800b74e7a7ba243ee20b94d70ae284c67971762fbc4d51d1c629fb1d98ba5f83a4a773e
         only-arches:
           - x86_64
-      - type: file
-        path: com.bitwig.BitwigStudio.appdata.xml
-      - type: file
-        path: com.bitwig.BitwigStudio.xml
 
 # vim: set expandtab tabstop=2 sw=2:
