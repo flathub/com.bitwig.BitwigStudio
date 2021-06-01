@@ -44,8 +44,11 @@ add-extensions:
 modules:
   - name: "bitwig-studio"
     buildsystem: simple
+    build-options:
+      strip: false
+      no-debuginfo: true
     build-commands:
-      - ar p bitwig-studio-*.deb data.tar.xz | tar -xJf -
+      - ar p bitwig-studio.deb data.tar.xz | tar -xJf -
       - cp -r opt/bitwig-studio/* ${FLATPAK_DEST}
       - cp -r usr/* ${FLATPAK_DEST}
     post-install:
@@ -53,8 +56,9 @@ modules:
       - install -d /app/extensions/Plugins
     sources:
       - type: file
-        url: https://downloads.bitwig.com/stable/3.3.10/bitwig-studio-3.3.10.deb
-        sha512: 3d7eb9cff4f2ea94f73d7cdba2b8ed34bb5f1bd70711cb499256e0298335293670c324b717f794cb8e77be7781f19f98dd533c2a32838186fa0b746b3d6617a9
+        url: https://www.bitwig.com/dl/?id=439&os=installer_linux
+        dest-filename: bitwig-studio.deb
+        sha512: 37308548ebb7537b42779474a5779588ecd1597641c35c8e56cdc83ba800b74e7a7ba243ee20b94d70ae284c67971762fbc4d51d1c629fb1d98ba5f83a4a773e
         only-arches:
           - x86_64
 
