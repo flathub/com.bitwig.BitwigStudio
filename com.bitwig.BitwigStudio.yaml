@@ -44,6 +44,9 @@ add-extensions:
 modules:
   - name: "bitwig-studio"
     buildsystem: simple
+    build-options:
+      strip: false
+      no-debuginfo: true
     build-commands:
       - ar p bitwig-studio.deb data.tar.xz | tar -xJf -
       - cp -r opt/bitwig-studio/* ${FLATPAK_DEST}
