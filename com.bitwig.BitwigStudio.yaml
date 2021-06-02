@@ -20,8 +20,14 @@ finish-args:
   # For desktop notifications
   - --talk-name=org.freedesktop.Notifications
 
-  # Give access to HOME
-  - --filesystem=home
+  # Give access to the host filesystem
+  # Bitwig Studio is a media application, and many users have files
+  # on removable media and various locations.
+  # As of today it is too complicated to ask the user to run commands in
+  # the terminal to grant more permissions to Bitwig Studio.
+  # Once there is an easy and graphical way to tweak the sandbox permission
+  # we may switch to the home only.
+  - --filesystem=host
 
   # Java stuff
   - --persist=.java
