@@ -20,8 +20,14 @@ finish-args:
   # For desktop notifications
   - --talk-name=org.freedesktop.Notifications
 
-  # Give access to HOME
-  - --filesystem=home
+  # Give access to the host filesystem
+  # Bitwig Studio is a media application, and many users have files
+  # on removable media and various locations.
+  # As of today it is too complicated to ask the user to run commands in
+  # the terminal to grant more permissions to Bitwig Studio.
+  # Once there is an easy and graphical way to tweak the sandbox permission
+  # we may switch to the home only.
+  - --filesystem=host
 
   # Java stuff
   - --persist=.java
@@ -56,9 +62,9 @@ modules:
       - install -d /app/extensions/Plugins
     sources:
       - type: file
-        url: https://www.bitwig.com/dl/?id=438&os=installer_linux
+        url: https://www.bitwig.com/dl/?id=440&os=installer_linux
         dest-filename: bitwig-studio.deb
-        sha512: 9c7ad87747030593ef54e10df74d03ec2389aa965558e7a98d48222aa77e4b8c267f359342b6b885a3b6bcdb1972a47c3545be9376c605652c1f86957adf3ac5
+        sha512: a88512fb42ad037ff3f93c4603cbb1d84dd2d6768375fd445dca999ccbbea6c07111307b887bffd24450566ad420f984e76317ff87c9875070659bdaa13e4ea1
         only-arches:
           - x86_64
 
