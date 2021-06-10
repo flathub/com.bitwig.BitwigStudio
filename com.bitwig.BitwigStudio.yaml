@@ -64,7 +64,7 @@ modules:
       - type: file
         url: https://www.bitwig.com/dl/?id=441&os=installer_linux
         dest-filename: bitwig-studio.deb
-        sha512: 47254317bab59ceabc9bee39660092d38ca4e72dea3d06547046b9c07c7a68cba9e55784174ed88a69caef1654635e1d6e580ff896ebd8f615717f23e412de0d
+        sha512: 940ac18eac24d415f020126351cfb5687f71798dc3ee19b672d6bf132cf590995987de3198d4fd6a7c8f58bf68f437b05c0f5d08f2b0c05ef803cca9e5b60e6f
         only-arches:
           - x86_64
 
