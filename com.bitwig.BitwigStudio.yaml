@@ -1,7 +1,7 @@
 ---
 app-id: com.bitwig.BitwigStudio
 command: bitwig-studio
-runtime-version: "20.08"
+runtime-version: "21.08"
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 finish-args:
@@ -81,9 +81,9 @@ modules:
       - install -d /app/extensions/Plugins
     sources:
       - type: file
-        url: https://www.bitwig.com/dl/?id=449&os=installer_linux
+        url: https://www.bitwig.com/dl/?id=450&os=installer_linux
         dest-filename: bitwig-studio.deb
-        sha512: 279f18eaac85830b7067e8f788ed1eb9b7f95dcfa01f33765544e6e241c8991519a042e8761c5d68f8b5c631ae7a7e165f7412e16ba7bdd5a0893ca8d6402e2b
+        sha512: b2f7ec02c81b477d58a1fa2f79f06ad063e4b8ac4b0abb297d4d8e0bbf87e26fdd7c625a3dfa0a837ef64bc3612bdabd3b84b0d324fb146533ed3cd6481fa8c7
         only-arches:
           - x86_64
 
