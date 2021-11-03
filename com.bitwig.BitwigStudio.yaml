@@ -81,9 +81,9 @@ modules:
       - install -d /app/extensions/Plugins
     sources:
       - type: file
-        url: https://www.bitwig.com/dl/?id=453&os=installer_linux
+        url: https://www.bitwig.com/dl/?id=456&os=installer_linux
         dest-filename: bitwig-studio.deb
-        sha512: 99eca40747fee6080c3115b5d8f6afc7d1b3a3a898f4803221c07e32eb78e42a7223accbe49864a3a5826411dba32cb3fd40b39bc41fb0bcd84120fde2270985
+        sha512: fda654937b5869c9d4f7fa3c6dbc11d656129fba6b897953fd6b0ca49c0910a064092461896174cb98fa18cef2dc437db166d54f1e89edfdbd118a0b3351c82d
         only-arches:
           - x86_64
 
