@@ -1,7 +1,7 @@
 ---
 app-id: com.bitwig.BitwigStudio
 command: bitwig-studio
-runtime-version: "20.08"
+runtime-version: "21.08"
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 finish-args:
@@ -44,7 +44,7 @@ finish-args:
 add-extensions:
   org.freedesktop.LinuxAudio.Plugins:
     directory: extensions/Plugins
-    version: '20.08'
+    version: '21.08'
     add-ld-path: lib
     merge-dirs: lxvst;vst3
     subdirectories: true
@@ -52,12 +52,12 @@ add-extensions:
 
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: '20.08'
+    version: '21.08'
 
   org.freedesktop.Platform.GL32:
     directory: lib/i386-linux-gnu/GL
     version: '1.4'
-    versions: 20.08;1.4
+    versions: 21.08;1.4
     subdirectories: true
     no-autodownload: true
     autodelete: false
@@ -81,9 +81,9 @@ modules:
       - install -d /app/extensions/Plugins
     sources:
       - type: file
-        url: https://www.bitwig.com/dl/?id=447&os=installer_linux
+        url: https://www.bitwig.com/dl/?id=455&os=installer_linux
         dest-filename: bitwig-studio.deb
-        sha512: dfbcd08badf9f481e0367f929ddf69a67bdef10f9039e5e8cd1514280f69ffba03f19c3434e5bf73618c46bf961ef18f9543e669e4e4af688617f72f7d992c45
+        sha512: 2bee0e7767d4c9e73b25b430396b14302c3722cff9f89f71db50bc6497783ac06d6ca9e3a763f0f1ca09bdf6b28b73305c007d02c631078d3e6d2ad1052d38dc
         only-arches:
           - x86_64
 
