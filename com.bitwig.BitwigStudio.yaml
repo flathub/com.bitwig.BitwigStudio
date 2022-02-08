@@ -79,6 +79,7 @@ modules:
     post-install:
       - ln -sf ../bitwig-studio ${FLATPAK_DEST}/bin/
       - install -d /app/extensions/Plugins
+      - install -d /app/lib/i386-linux-gnu
     sources:
       - type: file
         url: https://www.bitwig.com/dl/?id=469&os=installer_linux
