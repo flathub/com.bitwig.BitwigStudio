@@ -82,9 +82,9 @@ modules:
       - install -d /app/lib/i386-linux-gnu
     sources:
       - type: file
-        url: https://www.bitwig.com/dl/?id=472&os=installer_linux
+        url: https://www.bitwig.com/dl/?id=473&os=installer_linux
         dest-filename: bitwig-studio.deb
-        sha512: 9331773692f5dd5d878498855e613033c3a5be5097a9eebc1cf20e46380477e253ae8a24b99b3251753542fd6755a3e639a03f456ca850d794e77aed64287a0d
+        sha512: 65fd92213d9fc12e2d5a35993acd6f7fa9bdace8e73f44e662708bd1fe496a8308dbba87be762cc958fc66064c13c9872d3f5262f16e41d3a46a2959e74285b1
         only-arches:
           - x86_64
 
