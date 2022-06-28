@@ -73,18 +73,16 @@ modules:
       strip: false
       no-debuginfo: true
     build-commands:
-      - ar p bitwig-studio.deb data.tar.xz | tar -xJf -
-      - cp -r opt/bitwig-studio/* ${FLATPAK_DEST}
-      - cp -r usr/* ${FLATPAK_DEST}
+      - unzip BitwigStudio.zip -d ${FLATPAK_DEST}
     post-install:
       - ln -sf ../bitwig-studio ${FLATPAK_DEST}/bin/
       - install -d /app/extensions/Plugins
-      - install -d /app/lib/i386-linux-gnu
+      - install -d /app/lib/i386-linux-gnu/GL
     sources:
       - type: file
-        url: https://www.bitwig.com/dl/?id=481&os=installer_linux
-        dest-filename: bitwig-studio.deb
-        sha512: ea8cca18af462e24e8999e8fdb874f1cd2c720af1f2e98055bd10b35a6ec205657a7b04c1cceadbb25cdac754a7743d92e472cd42575a36afaab20886cd399e1
+        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-4.3.zip'
+        sha512: 85635bbb7b6b5c911d9b0bd16740a2efc58c6c02c121828729c623f279815b2ded6658961e1b4de4b5a9190a474c0e41167a58b9bfc551aa6c6c899f24dd1d9c
+        dest-filename : BitwigStudio.zip
         only-arches:
           - x86_64
 
