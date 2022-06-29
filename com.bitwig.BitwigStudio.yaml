@@ -37,6 +37,7 @@ finish-args:
   - --env=ALSA_CONFIG_PATH=
   - --env=VST_PATH=/app/extensions/Plugins/lxvst
   - --env=VST3_PATH=/app/extensions/Plugins/vst3
+  - --env=CLAP_PATH=/app/extensions/Plugins/clap
 
   # For 32 bits plugin host
   - --allow=multiarch
@@ -46,7 +47,7 @@ add-extensions:
     directory: extensions/Plugins
     version: '21.08'
     add-ld-path: lib
-    merge-dirs: lxvst;vst3
+    merge-dirs: lxvst;vst3;clap
     subdirectories: true
     no-autodownload: true
 
