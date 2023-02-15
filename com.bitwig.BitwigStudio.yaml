@@ -42,6 +42,11 @@ finish-args:
   # For 32 bits plugin host
   - --allow=multiarch
 
+  # Minimum required flatpak version.
+  # 1.0.9 on ubuntu 18.04 is known to not setup correctly multi-arch and the plugin host doesn't start.
+  # Maybe we need even higher min version.
+  - --require-version=1.1.0
+
 add-extensions:
   org.freedesktop.LinuxAudio.Plugins:
     directory: extensions/Plugins
@@ -81,8 +86,8 @@ modules:
       - install -d /app/lib/i386-linux-gnu/GL
     sources:
       - type: file
-        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-4.4.6.zip'
-        sha512: a9ceed61c98a86d365fc21c396a7301651748f16415d6f76cb2e699cd8a67b3f443966db699f7a1581980615c2890d843908a83ab7c0cf2fd55542e6bc784cef
+        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-4.4.8.zip'
+        sha512: d25dd728b7ec3b5a6c27fd556dfa23d79aab1d095ae281881dcc6fef0aec7b444edb97872651d7128373b9ee047141d25a72ffc12a01506ac586b75d0211c745
         dest-filename : BitwigStudio.zip
         only-arches:
           - x86_64
