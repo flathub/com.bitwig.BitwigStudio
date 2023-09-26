@@ -86,8 +86,8 @@ modules:
       - install -d /app/lib/i386-linux-gnu/GL
     sources:
       - type: file
-        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-5.0.7.zip'
-        sha512: 1d3e57c0478c0a5325108e2f6549c52cb2221bd1c735faaaf5a9b9ba1c8ffe53eb530f788cdd0154374d8209ee6d7d3f4f9de14856394657e00328035f85fb69
+        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-5.0.9.zip'
+        sha512: 43475fa772f493fcbb3eab8ab6fd7aa9de9919c67249bf462c080391005e737df84aa52406762141c83c578bc7fc2b1df967d1480bb7711683da0a080a3e7306
         dest-filename : BitwigStudio.zip
         only-arches:
           - x86_64
