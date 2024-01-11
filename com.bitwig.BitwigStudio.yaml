@@ -1,7 +1,7 @@
 ---
 app-id: com.bitwig.BitwigStudio
 command: bitwig-studio
-runtime-version: "23.08"
+runtime-version: "22.08"
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 finish-args:
@@ -86,8 +86,8 @@ modules:
       - install -d /app/lib/i386-linux-gnu/GL
     sources:
       - type: file
-        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-5.1.zip'
-        sha512: 046e18113d309990c18543a214b0824b2a36f7c0b4199257ac5950123d75732af39873e0f0e7fa8a7f43d2d0c124a0e586e5be52ec43d8224cd4ccd710fe95cd
+        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-5.0.2.zip'
+        sha512: a403600cbb59d8296659151fd1c216350c7a26229e5d24ef59d0922ff98d46924ceacb8ea64e78a46de372327946d16898209f8e83cdaaccdf31ea0292e364ae
         dest-filename : BitwigStudio.zip
         only-arches:
           - x86_64
