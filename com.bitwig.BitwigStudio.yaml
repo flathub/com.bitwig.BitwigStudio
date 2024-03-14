@@ -80,6 +80,7 @@ modules:
       no-debuginfo: true
     build-commands:
       - unzip BitwigStudio.zip -d ${FLATPAK_DEST}
+      - cp com.bitwig.BitwigStudio.appdata.xml ${FLATPAK_DEST}/share/metainfo/
     post-install:
       - ln -sf ../bitwig-studio ${FLATPAK_DEST}/bin/
       - install -d /app/extensions/Plugins
@@ -91,5 +92,7 @@ modules:
         dest-filename : BitwigStudio.zip
         only-arches:
           - x86_64
+      - type: file
+        path: com.bitwig.BitwigStudio.appdata.xml
 
 # vim: set expandtab tabstop=2 sw=2:

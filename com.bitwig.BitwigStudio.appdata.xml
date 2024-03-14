@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://www.freedesktop.org/software/appstream/docs/ -->
+<!-- Copyright 2022 Bitwig GmbH -->
+<component type="desktop">
+  <id>com.bitwig.BitwigStudio</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <name>Bitwig Studio</name>
+  <developer id="com.bitwig">
+    <name>Bitwig GmbH</name>
+  </developer>
+  <summary>Modern music production and performance</summary>
+  <description>
+    <p>Bitwig Studio is a digital audio workstation (DAW) that inspires you to take greater control of your music,
+    giving you access to every aspect of your production. Streamline your creative process and quickly evolve your
+    ideas into complete songs, tracks, and compositions. Record and arrange, improvise and perform, or do it all at once.
+    Design sounds. Build instruments. Make music.</p>
+  </description>
+  <launchable type="desktop-id">com.bitwig.BitwigStudio.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.bitwig.com/media/image/bitwig-home_2111_bws-4_lg/Bitwig-Home_2111_BWS-4_LG-SD.png</image>
+      <caption>Bitwig Studio</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig-bws4_screenshot-record-and-arrange/Bitwig-BWS4_Screenshot-Record-and-Arrange.png</image>
+      <caption>Bitwig Arranger</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig-bws4_screenshot-improvise-and-perform/Bitwig-BWS4_Screenshot-Improvise-and-Perform.png</image>
+      <caption>Bitwig Mixer</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig-bws4_screenshot-design-sounds/Bitwig-BWS4_Screenshot-Design-Sounds.png</image>
+      <caption>Sound Design</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig-bws4_audio-editing_full/Bitwig-BWS4_Audio-Editing_full_3.png</image>
+      <caption>Audio Editing</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig-bws4_screenshot-expressive-midi_full/Bitwig-BWS4_Screenshot-Expressive-MIDI_full.png</image>
+      <caption>Expressive MIDI Support</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig-bws4_time-stretching_full/Bitwig-BWS4_Time-Stretching_full.png</image>
+      <caption>Time-Stretching</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig-studio-bws3_modulators_2/Bitwig-Studio-BWS3_Modulators_2.png</image>
+      <caption>Modulation Heaven</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig_bws3-1_hw_integration/Bitwig_BWS3-1_HW-Integration.png</image>
+      <caption>Hardware Integration</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig-bws3-2_enter-the-grid/Bitwig-BWS3-2_Enter-the-Grid.png</image>
+      <caption>Enter The Grid</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.bitwig.com/media/image/bitwig-bws3-2_sampler-main/Bitwig-BWS3-2_Sampler-Main.png</image>
+      <caption>Sampler, Resampled</caption>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1" />
+  <recommends>
+    <memory>4096</memory> <!-- recommend at least 4GiB of memory -->
+  </recommends>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+    <display_length compare="ge">1024</display_length>
+    <display_length compare="ge">768</display_length>
+  </supports>
+  <requires>
+    <internet>first-run</internet>
+  </requires>
+  <update_contact>support@bitwig.com</update_contact>
+  <url type="homepage">https://www.bitwig.com/</url>
+  <url type="help">https://www.bitwig.com/learn/</url>
+  <url type="faq">https://www.bitwig.com/support/</url>
+  <url type="contact">https://www.bitwig.com/contact/</url>
+  <url type="bugtracker">https://www.bitwig.com/contact/</url>
+  <releases>
+    <release version="5.1.6" date="2024-03-12" />
+  </releases>
+  <provides>
+    <mediatype>application/bitwig-project</mediatype>
+    <mediatype>application/bitwig-clip</mediatype>
+    <mediatype>application/bitwig-scene</mediatype>
+    <mediatype>application/bitwig-device</mediatype>
+    <mediatype>application/bitwig-module</mediatype>
+    <mediatype>application/bitwig-modulator</mediatype>
+    <mediatype>application/bitwig-preset</mediatype>
+    <mediatype>application/bitwig-template</mediatype>
+    <mediatype>application/bitwig-package</mediatype>
+    <mediatype>application/bitwig-extension</mediatype>
+    <mediatype>application/bitwig-remote-controls</mediatype>
+    <mediatype>application/bitwig-impulse</mediatype>
+    <mediatype>application/vnd.bitwig.dawproject</mediatype>
+  </provides>
+</component>
