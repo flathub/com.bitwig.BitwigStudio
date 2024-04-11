@@ -50,7 +50,7 @@ finish-args:
 add-extensions:
   org.freedesktop.LinuxAudio.Plugins:
     directory: extensions/Plugins
-    version: '23.08'
+    version: '22.08'
     add-ld-path: lib
     merge-dirs: vst;vst3;clap
     subdirectories: true
@@ -58,12 +58,12 @@ add-extensions:
 
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: '23.08'
+    version: '22.08'
 
   org.freedesktop.Platform.GL32:
     directory: lib/i386-linux-gnu/GL
     version: '1.4'
-    versions: 23.08;1.4
+    versions: 22.08;1.4
     subdirectories: true
     no-autodownload: true
     autodelete: false
@@ -86,8 +86,8 @@ modules:
       - install -d /app/lib/i386-linux-gnu/GL
     sources:
       - type: file
-        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-5.1.6.zip'
-        sha512: cadcf437cb00447ff23f7c49d93fa345d86a905f855e243639861a4795dea5a6708573113101a69b99449d2bb45042c6e4af47b9567cc911f4079194dd27e7f8
+        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-5.1.7.zip'
+        sha512: a19c03f6797b40a78c2340a379683b9b7d85d0a003cce7f98edf79f64efd9c066832687d36d396917e5e7b9e9347f428250a7f8a57a5a25d1f89f5f5b21b1782
         dest-filename : BitwigStudio.zip
         only-arches:
           - x86_64
