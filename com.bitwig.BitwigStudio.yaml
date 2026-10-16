@@ -82,12 +82,15 @@ modules:
       - unzip BitwigStudio.zip -d ${FLATPAK_DEST}
     post-install:
       - ln -sf ../bitwig-studio ${FLATPAK_DEST}/bin/
+      # unzip drops a symlink whose target leaves its directory, so the link to the jre that
+      # the launcher execs does not survive the zip the way it does in the debian package.
+      - ln -sf ../lib/jre/bin/java ${FLATPAK_DEST}/bin/BitwigStudio
       - install -d /app/extensions/Plugins
       - install -d /app/lib/i386-linux-gnu/GL
     sources:
       - type: file
-        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-6.1.1.zip'
-        sha512: ad54ff7036b633d5f42bbc5accbb2a7d53b433c50fb27ac9616ceba083572cdbb9ac137bdece83c4deda7c2e603af208f09fc254566b195546802248005a76ff
+        url: 'https://downloads.bitwig.com/flathub/BitwigStudio-6.1.4.zip'
+        sha512: 5f5dc18eb5fbd88155900d7cca2a63ca61387f9006c9c068e96bbacf0aeeaeb5e3feb36363a4a512b92ff704394c5ca8445d1ccaabeae0cc155032a0e546d072
         dest-filename : BitwigStudio.zip
         only-arches:
           - x86_64
